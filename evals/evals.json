@@ -1,0 +1,79 @@
+{
+  "skill_name": "adsgo-new-ui-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build the Ads Manager Performance Overview page for AdsGo. It should show the platform tabs (Meta, Google, TikTok), today's stats (Spend $3,070, Revenue $6,800 +12.5%, ROAS 2.82x, Conversions 186), an AI Analysis Insights panel with one key highlight and one budget optimization suggestion, and a campaign table below with at least two campaign rows. Make it look exactly like the AdsGo app.",
+      "expected_output": "A complete HTML page with: Outfit font, #7033F5 purple scheme, 232px sidebar with active nav item accent bar, 64px header with breadcrumbs, platform tabs (Meta active), today's stats row with trend badges, AI Analysis Panel with gradient header + insight cards with colored left borders, campaign table with 120px rows and platform icons. All colors must come from CSS variables.",
+      "files": [],
+      "expectations": [
+        "Uses Outfit font imported from Google Fonts",
+        "Primary color #7033F5 is used for active states and primary buttons",
+        "Sidebar is 232px wide with active nav item showing left accent bar in #7033F5",
+        "Page background is #F9F9F9, content area background is #F9FAFC",
+        "Platform tabs rendered with Meta tab active (background #EDE8FF, border #D4C5FA)",
+        "Today's stats row shows all 4 metrics with trend pills (green #E1FAE1 for positive, red #FFEDEF for negative)",
+        "AI Analysis Panel has gradient header and at least one insight card with colored left border",
+        "Campaign table rows are tall enough for multi-line campaign info (~120px)",
+        "All color values use CSS variables (var(--color-primary) etc.) not hard-coded hex"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I need to add a Smart Optimization Console component for AdsGo. It should show two modes: Recommendations (toggle off) and Auto-apply (toggle on), plus a Budget Allocation section showing Current $900 vs Recommended $800. Also include the Daily Auto Analysis and 24/7 AI Optimization toggle rows. Use the AdsGo design system.",
+      "expected_output": "A self-contained card component (337×483px) with: blue-to-white gradient background (linear-gradient #F1F7FF to #FFFFFF), sparkle icon + 'Optimize Control Hub' title, subtitle text, two mode cards (inactive: #F2F8FF, active: gradient #3080E3→#285388), toggle switches (ON = #7033F5), settings rows with icons and Active/Inactive tags, Budget Allocation comparison.",
+      "files": [],
+      "expectations": [
+        "Component uses Outfit font and AdsGo CSS variables",
+        "Console background is a gradient from #F1F7FF to #FFFFFF (blue tint, NOT purple)",
+        "Console has border 1px solid #F5F5F5, border-radius 12px, shadow -2px 2px 15px rgba(14,0,45,0.06)",
+        "Toggle switches render correctly: ON state background #7033F5, OFF state #CBD5E1",
+        "Inactive mode cards use #F2F8FF background, active use gradient #3080E3→#285388",
+        "Active/Inactive status tags: Active uses #E1FAE1 bg with #00941E text, Inactive uses #F5F5F5 bg"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Build an 'Optimize Rules' modal for AdsGo. It should have a header with title and close button, a list of 3 existing rules with delete icons, an example hint row, an input for adding new rules, and a footer with 'Added: 8/10' count plus Cancel and Save buttons. Match the AdsGo design.",
+      "expected_output": "A modal overlay with: semi-transparent dark overlay rgba(0,0,0,0.50), white modal card with border-radius 20px, shadow 0 6px 20px rgba(0,0,0,0.15), header 68px with bottom divider #EAEAEA, body padding 20px 24px with 20px gap, footer padding with 12px gap, right-aligned buttons.",
+      "files": [],
+      "expectations": [
+        "Modal overlay uses rgba(0,0,0,0.50) background",
+        "Modal container has border-radius: 20px",
+        "Modal header is 68px tall with divider in #EAEAEA",
+        "Modal body has padding 20px 24px and gap 20px between items",
+        "Cancel button is outline/ghost style, Save button is primary purple pill",
+        "Footer shows rule counter text (#8C8C8C) and buttons are right-aligned with gap 12px",
+        "Input field has correct border radius (8px) and focus state"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I want to show the AI Analysis Pending state in AdsGo — when a user just launched their first campaign and AI insights aren't ready yet. Show the lock icon, a countdown '06h 06m remaining', explanation text, and a timeline with 3 steps: Campaign launched (done), Daily data collection (pending), AI analysis scheduled for Today 24:00.",
+      "expected_output": "A state card with: purple icon container, large countdown in #7033F5, descriptive text, timeline steps where the first step has a green check, others have clock/sparkle icons in gray, and the last step shows 'Today 24:00' label in purple.",
+      "files": [],
+      "expectations": [
+        "Countdown text '06h 06m remaining' is displayed in a large font in primary purple color",
+        "Timeline has 3 steps: first step shows completed state (green icon)",
+        "Third timeline step shows 'Today 24:00' timestamp label",
+        "Container uses soft background (#F9FAFC) with light border",
+        "Lock/AI icon is placed in a purple background container"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Build the AdsGo sidebar component. It needs: the AdsGo logo at top, a brand selector showing 'Nike Official / Growth Plan', nav items for Ads Manager (active), AI Optimize, Creative Hub, Analytics, Brand Center. Ads Manager should be visually active. At the bottom add the upgrade card with 'Upgrade to Growth Plan!' and a Help Center link.",
+      "expected_output": "A 232px fixed sidebar with: logo area 68px, brand selector with avatar + name + plan, nav items 48px tall each (Ads Manager highlighted with #F5F1FF bg + 4px purple left bar), inactive items in gray, sidebar uses border-right 1px solid #F1F5F9, upgrade card in #F7F4FF with purple outline button.",
+      "files": [],
+      "expectations": [
+        "Sidebar width is exactly 232px with padding 8px 16px and gap 16px",
+        "Sidebar border-right is 1px solid #F1F5F9, border-radius 12px on sidebar container",
+        "Active nav item (Ads Manager) has background #F5F1FF",
+        "Active nav item has a left accent bar (4px wide, #7033F5)",
+        "Brand selector shows brand name in bold and plan name in smaller muted text",
+        "Upgrade card has background #F7F4FF",
+        "Nav icon colors: active = #7033F5, inactive = #90A1B9"
+      ]
+    }
+  ]
+}
